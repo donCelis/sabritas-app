@@ -5,6 +5,8 @@ import Countries from '../components/Countries'
 // funciones propias
 
 function App () {
+  // aqui
+
   return (
     <>
       <Navbar />
