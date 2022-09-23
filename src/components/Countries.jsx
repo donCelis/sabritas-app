@@ -1,26 +1,11 @@
-import { useEffect, useState } from 'react'
+// hooks
+import useGetData from '../hooks/useGetData'
 
 // componentes
 import Card from './Card'
 
 const Countries = () => {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  const getData = async () => {
-    try {
-      const req = await window.fetch('https://restcountries.com/v3.1/all')
-      const res = await req.json()
-      setData(res)
-      setLoading(false)
-    } catch (error) {
-      setLoading(true)
-    }
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
+  const { data, loading } = useGetData('https://restcountries.com/v3.1/all')
 
   return (
     <section className='container py-4'>
