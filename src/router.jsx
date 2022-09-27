@@ -14,8 +14,10 @@ const Router = () => {
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Countries />} />
-          <Route path='country' element={<Country />} />
+          <Route path=':alphaCode' element={<Country />} />
+          <Route path='404' element={<p>Página no encontrada</p>} />
         </Route>
+        {/* <Route path='*' element={<p>Página no encontrada</p>} /> */}
       </Routes>
     </BrowserRouter>
   )

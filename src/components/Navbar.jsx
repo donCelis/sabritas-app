@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import Container from './Container'
 
 const Navbar = () => {
@@ -15,13 +16,18 @@ const Navbar = () => {
         <div className='collapse navbar-collapse'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='#'>
+              <NavLink to='/' className='nav-link' aria-current='page'>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
+              <NavLink to='/link' className='nav-link'>
                 Link
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <a target='_blank' className='nav-link' href='https://google.com' rel='noreferrer'>
+                Google
               </a>
             </li>
           </ul>
